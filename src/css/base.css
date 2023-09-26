@@ -7,7 +7,7 @@
 
 * {
   box-sizing: border-box;
-  outline: 1px dashed rgba(0, 119, 255, 0.459);
+  /* outline: 1px dashed rgba(0, 119, 255, 0.459); */
 }
 
 html,
@@ -61,6 +61,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 ul.navbar {
@@ -133,7 +134,7 @@ footer {
   text-align: center;
   padding: 0 70px;
   color: var(--black);
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 footer h6 {
@@ -185,4 +186,134 @@ footer h6 {
 
 .social-links a img {
   width: 25px;
+}
+
+/* Tablet Screen Optimization */
+
+@media (max-width: 850px) {
+  nav {
+    min-height: 100px;
+    margin-top: 30px;
+  }
+  ul.navbar {
+    max-width: 600px;
+    padding: 0 60px;
+    gap: 50px;
+    height: 50px;
+  }
+
+  footer {
+    margin-bottom: 25px;
+    gap: 20px;
+  }
+
+  footer h6 {
+    font-size: 0.9rem;
+    margin: auto 0;
+  }
+
+  .music-cont {
+    padding: 7px 20px;
+  }
+
+  .music-cont img {
+    max-width: 30px;
+  }
+
+  .music-info {
+    gap: 5px;
+  }
+  .music-info h6:first-child {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .music-info h6:nth-child(2) {
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .music-cont p {
+    font-size: 10px;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+
+  .social-links a img {
+    width: 20px;
+  }
+}
+
+/* Mobile Styling */
+@media (max-width: 512px) {
+  nav {
+    min-height: 100px;
+    margin-top: 30px;
+  }
+  ul.navbar {
+    max-width: 400px;
+    padding: 0 30px;
+    gap: 20px;
+    height: 50px;
+  }
+
+  a.nav-link {
+    font-size: 0.7rem;
+  }
+
+  footer {
+    margin-bottom: 25px;
+    gap: 10px;
+    padding: 0 15px;
+  }
+
+  footer h6 {
+    font-size: 0.5rem;
+  }
+
+  .music-cont {
+    padding: 5px 15px;
+  }
+
+  .music-cont img {
+    max-width: 30px;
+  }
+
+  .music-info {
+    gap: 0px;
+  }
+  .music-info h6:first-child {
+    font-size: 12px;
+  }
+
+  .music-info h6:nth-child(2) {
+    font-size: 10px;
+  }
+
+  .music-cont p {
+    display: none;
+  }
+
+  .social-links {
+    gap: 10px;
+  }
+
+  .social-links a img {
+    width: 15px;
+  }
+
+  main h2 {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 1.7rem;
+  }
+
+  main h2::before {
+    height: 7px;
+    width: 300px;
+    background-color: rgb(240, 240, 240);
+    top: 60px;
+  }
 }

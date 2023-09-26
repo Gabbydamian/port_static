@@ -24,6 +24,17 @@ main {
   gap: 20px;
 }
 
+.nav-item:nth-child(1) .nav-link::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  display: inline-flex;
+  width: 30px;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 7px;
+}
+
 main h1 {
   background-color: #15271e;
   color: transparent;
@@ -46,4 +57,38 @@ h1 span:nth-child(2) {
 h5 {
   max-width: 750px;
   line-height: 1.7rem;
+}
+
+@media (max-width: 850px) {
+  main {
+    max-width: 600px;
+    gap: 50px;
+  }
+
+  h1 span:nth-child(2) {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 512px) {
+  main {
+    max-width: 360px;
+    gap: 50px;
+  }
+
+  h1 span:nth-child(2) {
+    margin-top: 20px;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+
+  h1 span:nth-child(2) {
+    font-size: 4rem;
+  }
+
+  main h5 {
+    font-size: .8rem;
+  }
 }

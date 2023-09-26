@@ -24,6 +24,17 @@ main {
   color: var(--black);
 }
 
+.nav-item:nth-child(4) .nav-link::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  display: inline-flex;
+  width: 30px;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 7px;
+}
+
 header {
   margin-inline: auto;
   /* margin-bottom: 70px; */
@@ -107,6 +118,7 @@ main header > p,
 .msg-wrap h3 {
   margin-inline: auto;
   text-decoration: underline;
+  text-align: center;
 }
 
 .exp-header,
@@ -203,4 +215,71 @@ button {
   font-weight: 500;
   cursor: pointer;
   padding: 8px 12px;
+}
+
+@media (max-width: 850px) {
+  main {
+    max-width: 650px;
+  }
+
+  .exp-wrap,
+  .cert-wrap,
+  .skill-wrap,
+  .msg-wrap {
+    width: 650px;
+  }
+
+  .msg-wrap {
+    gap: 0;
+    padding-inline: 50px;
+  }
+}
+
+@media (max-width: 512px) {
+  main {
+    max-width: 350px;
+  }
+
+  main header > p {
+    margin-top: 10px;
+    font-size: 0.7rem;
+    max-width: 350px;
+    line-height: 0.6rem;
+  }
+
+  main h2 {
+    text-decoration: underline;
+  }
+
+  main h2::before {
+    display: none;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .exp-wrap,
+  .cert-wrap,
+  .skill-wrap,
+  .msg-wrap {
+    width: 350px;
+  }
+
+  .msg-wrap {
+    gap: 0;
+    padding-inline: 50px;
+  }
+
+  form {
+    margin-top: 25px;
+    gap: 10px;
+  }
+
+  .skill-head {
+    flex-shrink: 1;
+    font-size: 1rem;
+    text-decoration: underline;
+  }
 }

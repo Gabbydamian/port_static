@@ -8,6 +8,17 @@
   flex-direction: column;
 }
 
+.nav-item:nth-child(2) .nav-link::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  display: inline-flex;
+  width: 30px;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 7px;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -44,4 +55,44 @@ main header > p {
 
 .project img {
   border-radius: 20px;
+}
+
+@media (max-width: 850px) {
+  main {
+    gap: 50px;
+    margin: 150px 0 50px 0;
+  }
+
+  .projects-container {
+    gap: 30px;
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 512px) {
+  main {
+    gap: 50px;
+    margin: 100px 0 30px 0;
+  }
+
+  .projects-container {
+    gap: 30px;
+    max-width: 350px;
+  }
+
+  main header > p {
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 0.7rem;
+    max-width: 350px;
+  }
+
+  .project {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .project img {
+    border-radius: 7px;
+  }
 }
