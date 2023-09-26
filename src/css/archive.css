@@ -17,6 +17,10 @@ main {
   margin: 150px 0 100px 0;
 }
 
+main h2::before {
+  top: 50px;
+}
+
 main header > p {
   color: var(--black);
   font-weight: 600;
@@ -26,22 +30,34 @@ main header > p {
   max-width: 550px;
   line-height: 1.5em;
 }
+.archives {
+  background: rgba(121, 32, 2, 0.2);
+  width: 750px;
+  border-radius: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  column-gap: 30px;
+  padding: 30px;
+}
 
-.projects-container {
+.archives .project {
+  width: 325px;
+  height: 300px;
+  background-color: #acd5fc;
+  border-radius: 15px;
+}
+
+.proj-col-1,
+.proj-col-2 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   gap: 30px;
-  max-width: 850px;
 }
 
-.project {
-  background: rgba(121, 32, 2, 0.2);
-  padding: 30px;
-  border-radius: 30px;
-}
-
-.project img {
-  border-radius: 20px;
+.proj-col-1 > .project:nth-child(2),
+.proj-col-2 > .project:first-child {
+  height: 340px;
 }

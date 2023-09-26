@@ -27,7 +27,7 @@ main {
 main h1 {
   background-color: #15271e;
   color: transparent;
-  text-shadow: 1px 1px 4px var(--white);
+  text-shadow: 1px 1px 3px var(--white);
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
