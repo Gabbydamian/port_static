@@ -5,8 +5,42 @@
 
 #homepage-wrapper {
   background-color: var(--lgt-green);
+  /* background-color: hsla(0, 100%, 50%, 1); */
+  background-image: radial-gradient(
+      at 40% 20%,
+      hsla(28, 100%, 74%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0px, transparent 50%);
+  background-size: 200% 200%, 200% 200%, 200% 200%, 200% 200%, 200% 200%,
+    200% 200%, 200% 200%;
+  animation: gradientAnimation 1s linear infinite;
   height: 100vh;
   overflow: hidden;
+}
+@keyframes gradientAnimation {
+  0%,
+  100% {
+    background-position: randomPosition(), randomPosition(), randomPosition(),
+      randomPosition(), randomPosition(), randomPosition(), randomPosition();
+  }
+  25% {
+    background-position: randomPosition(), randomPosition(), randomPosition(),
+      randomPosition(), randomPosition(), randomPosition(), randomPosition();
+  }
+  50% {
+    background-position: randomPosition(), randomPosition(), randomPosition(),
+      randomPosition(), randomPosition(), randomPosition(), randomPosition();
+  }
+  75% {
+    background-position: randomPosition(), randomPosition(), randomPosition(),
+      randomPosition(), randomPosition(), randomPosition(), randomPosition();
+  }
 }
 
 #home {
@@ -89,6 +123,6 @@ h5 {
   }
 
   main h5 {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
